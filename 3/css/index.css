@@ -1,0 +1,111 @@
+/*HTML节点选择题 而中间逗号代表着所有的节点都将使用同一种CSS样式*/
+/*,兄弟选择器*/
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+/*类选择器*/
+/*.代表一个节点的class name*/
+.number-1{
+    font-size: 30px;
+    color: red;
+    /*font-family它会去调用客户端本身的字体*/
+    /*如果字体不是在所有客户端存在的话那么我们将使用远程的加载模式，正常做东西要么不设置字体，要么用微软雅黑*/
+    font-family: 方正姚体;
+    /*字体的粗细bold加粗,默认100-1000之间可以选择的粗细*/
+    font-weight: bold;
+}
+/*id选择器*/
+/*#代表一个节点的id name*/
+/*id 名字是一个节点唯一的标识符,在JS中选取id名字的时候只能是唯一的。*/
+/*css中id虽然可以影响到多个节点，但是为了上述问题考虑，是不允许在节点中出现多个相同id名字的情况*/
+#number-2{
+    color: aqua;
+}
+/*后代选择器*/
+/*用一个空格隔开*/
+
+/*.number-1 .number-1-1{*/
+    /*color: blue;*/
+    /*!*em经常被用于标识字体大小*!*/
+    /*!*它是以原来字体大小的倍数缩放*!*/
+    /*font-size: 1.2em;*/
+/*}*/
+.number-1>.number-1-1{
+    color: blue;
+}
+/*属性选择器*/
+/*padding改变的话会使内容和border之间的距离产生改变*/
+input[type='text']{
+    padding: 15px 20px;
+    font-size: 1.2em;
+}
+/*position代表是定位它的参数有: absolute relative fixed static*/
+/*必须配合left 和 top使用*/
+/*元素的起始为止和浏览器的大小所构成的距离*/
+/*left其实是从右边开始，一般情况下我们使用的是margin:auto移动因为盒子有不固定的宽度，我们在移动时候没办法去计算相对的中心点位置*/
+.box1{
+    position: relative;
+    /*左边像右边移动多少像素点*/
+    z-index: 999;
+    left: 50%;
+    /*上边向下边移动多少个像素点*/
+    top: 30%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+/*固定定位*/
+/*它在使用固定模式的时候已经脱离的文档流,固定模式的时候该标签将会和body,html 同级别*/
+/*设置的时候相当于叛逆的儿子*/
+/*用途:用来做页面最上方的导航，或者需要在页面任何地方看到这个东西*/
+.box2{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index:999;
+    width: 100%;
+    height: 10%;
+    background-color: red;
+}
+/*绝对定位*/
+/*它脱离的文档流*/
+/*脱离文档流的用法主要是用在弹窗提示上，要配合z-index:999使用*/
+/*优先级会比所有的定位模式来的高*/
+/*z-index只能在position的时候可以使用,因为在定位的时候会有优先级的问题也就是定位的时候会发生模块的覆盖*/
+
+.box3{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    z-index: 0;
+    background-color: blue;
+    width: 10%;
+    height: 20%;
+}
+/*提醒：如果在进行绝对定位的时候外层应该使用一层相对定位来防止文档流脱离的情况发生*/
+/*如果你在做任何操作的时候发现了层级覆盖的问题你可以定义 position: relative; z-index:999;*/
+.box4{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    background-color: aqua;
+}
+
+/*如果我们想让一个BOX居中我们可以使用margin: auto;让左右对齐*/
+/*浏览器回去识别如果你的margin 左右为auto的话它会对应父级做一个居中*/
+/*在设置居中的时候我们都是默认使用margin:auto的方式*/
+.box5-margin{
+    width: 1000px;
+    height: 200px;
+    background-color: blue;
+    margin:10px auto;
+}
+.box6-margin{
+    width: 500px;
+    height: 200px;
+    background-color: aliceblue;
+    margin: auto;
+}

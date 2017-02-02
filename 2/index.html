@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--css就是我们所说的样式表-->
+    <!--css三种书写方式-->
+    <!--嵌入式-->
+    <!--缺点：我要写在html页面上，正常css文件都会超过千行，还有复用性差-->
+    <!--.在style中代表元素的class属性，#代表元素的id属性,一个样式的定义用一个花括号包裹，键值对形式输入，封号结尾-->
+    <!--在css样式中一个单词分隔通常用一个 - -->
+    <!--如果一个class和一个id名字相同是不会发生冲突的-->
+    <!--优先级,也就是越晚出现的属性如果相同会覆盖更早的属性-->
+    <!--行内和内嵌相互冲突的话，行内的优先级更高-->
+    <style>
+        .font{
+            color: red;
+            font-size: 20px;
+        }
+        .font{
+        }
+        #font{
+            color: green;
+            font-size: 25px;
+        }
+    </style>
+
+    <!--外链-->
+    <!--href对应的是css路径-->
+    <!--rel是声明-->
+    <link href="css/index.css" rel="stylesheet"/>
+</head>
+<body>
+    <!--第一种：行内内嵌式-->
+    <!--缺点：每一个元素都要重新去定义一个style-->
+    <!--css是一种key:value 键值对，只有一个键，但是一个键里面可以对应多种的值，也就是value-->
+    <p style="color: blue" class="font">123456</p>
+    <p class="font">我是class</p>
+    <p class="font">我是class2</p>
+    <p id="font">我是id</p>
+    <p class="content">我是外链css</p>
+    <!--box模型，它是没有任何东西的block-->
+    <!--html, block  inner-->
+    <!--block:div p h 特点就是，块为单位，一个元素只能占用一行-->
+    <!--inner:span img a input 特点:不会换行-->
+    <p>asdasdsadas  <span>asdasds</span></p>
+    <span>1</span> <span>2</span> <span>3</span>
+    <!--div是一个空白的东西，如果只写了DIV它是没有大小，没有任何提示-->
+    <div class="box">
+        啊是大家看哈撒低级卡刷多久啊是你到家咯啊实打实大苏打发射点发射点尽快会尽快把达萨可能大家
+    </div>
+    <div class="box">
+        <p>asdasdasdas</p>
+        <p>asdasdasdas</p>
+        <p>asdasdasdas</p>
+        <span>sadasdvc</span>
+    </div>
+
+    <div class="back"></div>
+
+</body>
+</html>

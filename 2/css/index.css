@@ -1,0 +1,68 @@
+.content{
+    font-size: 30px;
+    color: blue;
+}
+/*如果没有. # 只说了名字*/
+/*它代表的这个元素*/
+/*,代表的是同级关系*/
+/*hack手法，如果在写HTML的时候写CSS之前一定要记得做这个样式初始化操作*/
+/*height其实是查找了父级的高度，更具父亲的高度来算百分比，如果到了最顶（没有父亲了）那么它会根据浏览器窗口来计算*/
+html,body{
+    padding:0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/*像素单位*/
+/*在html中有有三种像素单位 px,%,em*/
+/*px 屏幕分辨率,它是根据像素点来设置*/
+/*1366*768常见电脑   1920*1080台式机显示器  1024*768老电脑 px */
+/* 768*1366 最接近 iphone 1080*1920 安卓手机  720*1280 老安卓 */
+/*dpi指的是一定的面积中像素点密度*/
+/*px缺点，就是在同一尺寸下可视大小的不同*/
+/*% 百分比，我们在不同像素情况下使用的大小比例 */
+/*内容是显示在content里面，但是颜色等设置会包括content和padding*/
+.box{
+    background-color: red;
+    /*如果定义了一个宽高，但是里面的元素大小超出了这个div就会发生溢出现象*/
+    /*宽高如果不定义那么它会跟着内部元素的大小而发生改变*/
+    width: 200px;
+    /*高度是根据父级元素的大小而定义的百分比*/
+    /*高度没有特殊情况就不要设置 */
+    /*height: 20%;*/
+    /*上 右  下 左 */
+    /*margin 可以为正数也可以为负数*/
+    /*margin: 100px 30px 30px 200px;*/
+    /*dashed虚线 solid 实线*/
+    border: solid 1px;
+    /*只输入一个代表四个数值都一致*/
+    /*输入两个 上下是第一个参数   右边和左边是一个参数*/
+    /*输入三个  上   右&左  下*/
+    /*padding 只能为正数 */
+    /*padding: 20px 40px 90px;*/
+    padding-left: 200px;
+}
+/*如果我只用了空格隔开一个元素，相当于找儿子*/
+.box p{
+    color: blue;
+}
+/*如果单独用一个元素进行声明的CSS它的优先级是最低的*/
+p{
+    color: red;
+}
+.back{
+    width: 500px;
+    height: 1000px;
+    /*如果图片未达到实际大小那么它将会平铺*/
+    background-image: url("../img/icon_index.jpg");
+    /*禁止图片平铺*/
+    /*repeat-x根据x轴平铺 repeat-x根据y轴平铺*/
+     /*no-repeat不平铺      */
+    /*background会根据div的大小来进行设置,在所有标签中都可以使用，但是因为div只是用于布局没有实际意义所以一般都会用在这个上面*/
+    /*background-position是根据当前标签左上角来定义x  y轴*/
+    background-repeat: no-repeat;
+    background-position: 400px 100px;
+}
+
+

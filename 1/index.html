@@ -1,0 +1,127 @@
+<!--html是一种浏览器能够识别的语言，它代表的是一种开区间和闭区间  开区间:<html>  闭区间：</html>-->
+<!--DOCTYPE 如果只声明html 代表的是它的文件为HTML5-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--HTML的title代表的是HTML的头，也就是一个文章的标题，即HTML标题-->
+    <title>1111111</title>
+</head>
+<body>
+    hello world.
+    <!--html标签,而HTML标签，大致如下:-->
+    <!--p标签代表的是段落，一个P标签代表着一段-->
+    <p>hello</p><p>world</p>
+    <!--span用处就是一个对一个段落里面的一小段文字做设置-->
+    <p>hello <span>world</span></p>
+    <!--href属于a标签中的一个属性用于显示第二张网页的路径-->
+    <!--target="_blank"是a标签中的一个属性它代表着点击转跳的时候是否要新建一个新的窗口-->
+    <!--a标签指的就是转跳一个链接-->
+    <a href="index2.html" target="_blank">index2</a>
+    <!--按钮-->
+    <!--javascript之间交互-->
+    <button>test</button>
+    <!--table代表的是表格一个表格的构成有 table开头 tr 行 td 列-->
+    <!--而一个表格只能有一个table,但是能有若干个tr 若干列td-->
+    <!--th代表的是表格的头也就是表格的标题-->
+    <!--table > tr > td-->
+    <!--table tr th-->
+    <table>
+        <tr>
+            <th>第1</th>
+            <th>第2</th>
+            <th>第3</th>
+            <th>第4</th>
+        </tr>
+        <tr>
+            <td>1111111111</td>
+            <td>222</td>
+            <td>3333</td>
+            <td>3333</td>
+        </tr>
+        <tr>
+            <td>444</td>
+            <td>555</td>
+            <td>666</td>
+        </tr>
+        <tr>
+            <td>444</td>
+            <td>555</td>
+            <td>666</td>
+            <td>666</td>
+        </tr>
+    </table>
+    <!--<input type="text" ></input>这种是错误的-->
+    <!--input代表的是输入，而label代表的是给这个input的注释显示在HTML上-->
+    <!--还有input有个重要的属性type  type="text"为文本-->
+    <!--placeholder如果文本没有输入任何信息那么将会显示预置的文字-->
+    <!--placeholder只能用在输入类的标签中-->
+    <label>账号:</label>
+    <input type="text" placeholder="账号"/>
+    <input type="password"  placeholder="密码"/>
+    <!--因为一个chekbox它是没办法去识别你周别的文字,chebox范围其实是非常小的-->
+    <!--如果我们只能让一个生效我们要给标签定义一个name-->
+    <!--chebox复选框-->
+    <label>
+        <input type="checkbox" />
+        你要选择吗？
+    </label>
+
+    <input type="checkbox"/>
+    <label>你要选择吗？</label>
+    <!--单选框-->
+    <!--一个input标签里面的radio单选框如果它的name相同那么它们只能选择其中一个，如果不同则代码都可以选取-->
+    <label>
+        <input type="radio" name="select"/>
+        单选1
+    </label>
+    <label>
+        <input type="radio" name="select"/>
+        单选2
+    </label>
+    <!--select外部大标签用于识别-->
+    <!--内部有若干个小标签option用于选择-->
+    <select>
+        <option value="1">团子</option>
+        <option value="2">13</option>
+        <option value="3">UN</option>
+    </select>
+    <!--textarea代表的是多行输入-->
+    <!--cols代表的是输入多少行-->
+    <textarea cols="10">
+
+    </textarea>
+    <!--div代表的是一个盒子-->
+    <!--一张网页会有若干个DIV组成，代表着一块区域，或者一个区域的某一个功能块，主要涉及到布局-->
+    <!--主要就是为了让页面分成若干块更好的排版-->
+    <!--div更主要的是涉及CSS块-->
+    <div>
+
+    </div>
+    <!--无序列表-->
+    <!--无序列表会被经常用在制作页面菜单上或者导航-->
+    <!--li p 这些有开区间和闭区间的标签里面都可以套一些常用的其他标签-->
+    <!--比如:<li><a href="index2.html">index</a></li>-->
+    <ul>
+        <li>团子</li>
+        <li>13</li>
+        <li>UN</li>
+    </ul>
+    <!--有序列表-->
+    <ol>
+        <li>团子</li>
+        <li>13</li>
+        <li>UN</li>
+    </ol>
+    <!--img代表的是图片-->
+    <!--src是图片中重要的属性，它用来放置图片路径-->
+    <!--绝对路径-->
+    <!--我假如说我要移动这个项目或者把这个项目放到其他磁盘那么你的所有绝对路径都将会失效-->
+    <!--<img src="C://Users/john_/Desktop/html_temp/1/img/icon_index.jpg"/>-->
+    <!--./或者没写 代表的是本文件夹下的路径-->
+    <!--它的相对指的是对于这个index.html的路径-->
+    <!--../则代表的是它的上一级文件夹-->
+    <img src="./img/icon_index.jpg"/>
+    <img src="../icon_index.jpg"/>
+</body>
+</html>

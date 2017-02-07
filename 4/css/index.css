@@ -1,0 +1,126 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.box{
+    margin:120px auto 0;
+    width: 1000px;
+    background-color: red;
+}
+/*float的时候无法实用margin:auto来进行居中的*/
+/*float有两种属性: left或者right*/
+/*float 它主要是用作于商品列表 比如是淘宝的查找某件商品后出来的列表*/
+/*float 会溢出如果子集的宽度比父级的宽度要大那么子集的float会自动换行*/
+.box-float{
+    width: 250px;
+    height: 100px;
+    float:left;
+    background-color: blue;
+    margin: 15px;
+}
+
+/*:xxx属于一种伪类选择器(after before hover active focus visited)*/
+/*这两种都是用于float时清除浮动的操作*/
+
+/*.clear{*/
+/*clear: both;*/
+/*}*/
+.box:after{
+    content: ' ';
+    display: block;
+    clear: both;
+}
+.box1{
+    background-color: aqua;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+}
+/*非块级元素默认是无宽高，需要内部有填充字体或者块级元素,它会并排显示*/
+/*display 三个属性 block 设置元素为块级元素  inline 设置元素为非块级元素  none设置元素为不可见*/
+.box-display{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 15px;
+    display: none;
+}
+/*min-xxx是在给一个高度或者宽度为百分比的时候设置的一个最小阈值，防止高宽过小布局错位*/
+/*max-XX是在给一个高度或者宽度为百分比的时候设置的一个最大阈值，防止高宽过小布局错位*/
+.nav{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    min-width: 500px;
+    height: 100%;
+    max-height: 80px;
+    background-color: #2f3131;
+    /*shadow影子 颜色值  */
+    box-shadow: #2f3131 0px 0px 15px;
+}
+.nav-box{
+    width: 1000px;
+    margin: auto;
+    height: 100%;
+}
+/*ul,li 默认会有40px的padding 所以我们要对ul li做一个初始化的操作,而list-style是去除掉ul li 的默认样式*/
+.nav-ul,.nav-ul>li{
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+}
+.nav-box:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.nav-ul>li{
+    float: left;
+    width: 25%;
+    height: 80px;
+
+}
+/*非块级元素无法margin:auto居中*/
+/*line-height修改文字的行高*/
+/*text-decoration清除字体的下划线,a标签里面一个链接文字正常是带有一个下划线*/
+/*在设置CSS3动画的时候我们要设置浏览器识别*/
+/*-moz-火狐  -webkit-谷歌浏览器  -o- 欧朋 设置内核识别来让CSS3兼容某个浏览器*/
+/*一种效果要用一个逗号隔开*/
+.nav-ul li a{
+    display: block;
+    text-align: center;
+    height: 100%;
+    line-height: 2em;
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    font-family: 微软雅黑;
+    transition:background-color  0.3s, color 0.3s;
+    -moz-transition:background-color 0.3s,color 0.3s;	/* Firefox 4 */
+    -webkit-transition:background-color 0.3s,color 0.3s;	/* Safari 和 Chrome */
+    -o-transition:background-color 0.3s,color 0.3s;	/* Opera */
+}
+.active{
+    background-color:cadetblue;
+}
+/*hover鼠标移动过去的时候会发生的状态*/
+.nav-ul li a:hover{
+    background-color:cadetblue;
+    color: cornsilk;
+}
+
+
+
+/*shadow 第一个参数是颜色值  第二参数是影子往左边  最后一个是模糊*/
+.shadow{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin:15px auto;
+    box-shadow: #2f3131 10px 10px 10px;
+}

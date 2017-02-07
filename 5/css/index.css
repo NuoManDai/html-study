@@ -1,0 +1,21 @@
+.box{
+    width: 23%;
+    height: 300px;
+    background-color: #2f3131;
+    margin:15px;
+    float: left;
+}
+/*min-width你的最小宽度限制在768PX  768px<设备宽度<屏幕最大宽度*/
+/*max-width 你的最大宽度在768px  0<设备宽度<768px*/
+@media (max-width: 768px) {
+    .box{
+        background-color: red;
+        width: 45%;
+        margin:5px;
+    }
+}
+.container:after{
+    content:" ";
+    display: block;
+    clear: both;
+}

@@ -28,8 +28,8 @@ html,body{
 }
 .container-right{
     width: 700px;
-    height: 100%;
-    background-color: white;
+    /*height: 100%;*/
+
     margin-left: 30px;
 }
 /*网页标题*/
@@ -70,4 +70,158 @@ html,body{
 .active{
     background-color: #f5f7f9;
 
+}
+.person{
+    width: 100%;
+    background-color: white;
+    margin-top: 15px;
+    padding: 20px 0px;
+}
+/*img它是非块级的元素，它设定百分比的时候只能100%，而且或者为px单位的大小 121px*/
+/*margin:auto 居中方式对img无效*/
+/*我们在处理img标签的时候最好嵌套一个div来进行处理,首先我们要让img 标签为height and width : 100%*/
+/*为100%时候那会根据你的父级元素，也就是嵌套那个div来进行设置*/
+.img-auto{
+    height: 100%;
+    width: 100%;
+}
+.person-img{
+    margin: auto;
+    width: 121px;
+    height: 121px;
+    /*是为了让div和内部留出空隙*/
+    padding: 2px;
+    box-shadow: #9aa5a5 0px 0px 1px;
+}
+.person-name{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+.person-tag{
+    width: 80%;
+    margin: auto;
+
+}
+.person-tag:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.person-tag a{
+    text-decoration: none;
+    float: left;
+    width: 33%;
+    text-align: center;
+
+}
+.tag-number{
+    margin: 0px auto;
+    font-weight: bold;
+    color: #262a30;
+}
+.tag-name{
+    margin: 0px auto;
+    font-size: 13px;
+    color: #9aa5a5;
+}
+.tag-border{
+    border-left: solid 1px #9aa5a5;
+    border-right: solid 1px #9aa5a5;
+}
+.person-rss{
+    margin: 15px 10px;
+    border-top: dashed 1px #9aa5a5;
+    border-bottom: dashed 1px #9aa5a5;
+}
+.person-rss a{
+    text-decoration: none;
+    color: red;
+    display: block;
+    text-align: center;
+}
+
+.person-link{
+    margin: 0 10px;
+}
+.person-link:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.person-link a{
+    display: block;
+    float: left;
+    width: 50%;
+    text-decoration: none;
+    color: #323232;
+    font-size: 13px;
+    text-align: center;
+}
+.person-link a:hover{
+    background-color: #c8d7d7;
+    /*设置边角的弧度*/
+    border-radius: 3px;
+}
+.container-box{
+    width: 100%;
+    height: 300px;
+    margin: 10px auto;
+    padding: 2px;
+    background-color: white;
+    /*设置当鼠标移动到元素的时候指针的样式*/
+    cursor: pointer;
+    border-radius: 5px;
+    transition:box-shadow  0.3s;
+    -moz-transition:box-shadow 0.3s;	/* Firefox 4 */
+    -webkit-transition:box-shadow 0.3s;	/* Safari 和 Chrome */
+    -o-transition:box-shadow 0.3s;	/* Opera */
+}
+
+.container-box:hover{
+    box-shadow: #8f939b 1px 1px 5px;
+}
+
+.pointer-top{
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(20, 20, 20, 0.5);
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    /*设置行间距*/
+    line-height: 2.5em;
+}
+
+
+.content-title{
+    font-size: 2em;
+    text-align: center;
+    font-weight: lighter;
+}
+.content-tag{
+    font-size: 12px;
+    color: #9aa5a5;
+    text-align: center;
+}
+.content-link{
+    display: block;
+    text-decoration: none;
+    color: #2f3131;
+    text-align: center;
+    margin:30px auto 0;
+    width: 100px;
+    border: solid 2px;
+    padding: 5px;
+    transition:background-color  0.3s,color 0.3s;
+    -moz-transition:background-color 0.3s,color 0.3s;	/* Firefox 4 */
+    -webkit-transition:background-color 0.3s,color 0.3s;	/* Safari 和 Chrome */
+    -o-transition:background-color 0.3s,color 0.3s;	/* Opera */
+}
+.content-link:hover{
+    background-color: black;
+    color: white;
 }
